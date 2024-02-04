@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .overlay{
+            margin-top: 10em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(100,100,100,0.1)
+            
+        }
+        .logo-txt {
+            font-family: "Fjalla One", sans-serif;
+            color: white;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 4rem;
+            text-align: center;
+            }
+
+            .logo{
+                width: 200px;
+                max-width: 100%;
+            }
+
+        .text{
+            margin-left: 0.7em;
+            width: 70%;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+        }
+        #wrapper{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80vh;
+            background-color: rgb(243, 240, 240);
+            overflow: hidden;
+        }
+        
+        .img{
+            width: 55%;
+            height: 100%;
+            background-image: url("img-bg.jpg");
+            background-size: cover;
+            overflow: hidden;
+        }  
+        .fieldset{
+            margin-top: 1em;
+            padding: 0.5em;
+            background-color: white;
+            box-shadow: 2px 3px 3px grey;
+        }
+        .form-controls{
+            width: 80%;
+        }
+        h2{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .list{
+           width: 100%;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           flex-wrap: wrap;
+        }
+        .list li{
+            list-style: none;
+            width: 45%;
+            margin: .5em;
+        }
+        label{
+            display: block;
+            font-size: 0.7rem;
+        }
+        #submit{
+            margin: 2em 0.7em;
+            background-color: #596D48 ;
+            font-size: 1.2rem;
+            padding: 0.5em 1.5em;
+            border-radius: 0.5em;
+            color: white;
+            border: none;
+        }
+        .log-in{
+            margin-left:0.7em ;
+            font-size: 1rem;
+        }
+        .log-in .link a{
+            text-decoration: none;
+            color: #596D48;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        input{
+            outline: none;
+            border-color: rgb(200,200,200);
+            height: 30px;
+            width: 70%;
+            padding-left: 0.5em;
+            border-radius: 0.5em;
+        }
+        input:focus{
+            border: 1px solid blue;
+            box-shadow: 2px 2px 3px grey;
+        }
+        input.error:invalid{
+            border: 3px solid red;
+            border-radius: 0.5em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <section class="img">
+        <div class="overlay">
+            <img src="odin.png" class="logo" alt="Odin">
+            <h1 class="logo-txt">The Odin Project</h1>
+
+        </div> 
+        </section>
+        <section><div class="container">
+            <p class="text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br/><em>Sign up now to get started</em></p>
+            <form action="#" method="post">
+                <div class="fieldset">
+                    <h2>Let's do this</h2>
+                    <div class="form-controls">
+                    <ul class="list">
+                        <li>
+                            <label for="name">FIRST NAME:</label>
+                            <input type="text" id="name" name="user-name" placeholder="First Name" pattern="[a-zA-z]{1,30}" required>
+                        </li>
+                        <li>
+                            <label for="last-name">LAST NAME</label>
+                           <input type="text" id="last-name" name="user-last-name" placeholder="Last Name" pattern="[a-zA-Z]{1,30}" required>
+                        </li>
+                        <li>
+                            <label for="email">EMAIL</label><input type="email" id="email" name="user-email" placeholder="someone@gmail.com" required></li>
+                        <li><label for="phone-number">PHONE NUMBER</label><input type="tel" id="phone-number" name="user-pnone-number" placeholder="00263 776 118 494"></li>
+                        <li>
+                           <label for="password">PASSWORD</label>
+                           <input type="password" class="error" id="password" name="password" placeholder="Password" pattern="" required
+                           >
+                        </li>
+                        <li>
+                           <label for="confirmation">CONFIRM PASSWORD</label>
+                           <input type="password" class="error"
+                           id="confirmation"   name="confirm-password" placeholder="Confirm Password" required>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                 <button type="submit" id="submit">Create Account</button>
+                 <p class="log-in">Already have account? <span class="link"><a href="#">Log in</a></span></p>
+            </form>
+        </div></section>
+    </div>
+</body>
+</html>
